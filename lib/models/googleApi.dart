@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class GoogleApi extends StatefulWidget {
   @override
   _GoogleApiState createState() => _GoogleApiState();

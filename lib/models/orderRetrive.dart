@@ -5,6 +5,7 @@ class OrderRetrive {
   String dataModificad;
   String total;
   String status;
+
   // ignore: non_constant_identifier_names
   List<LineItem> line_items;
   Billing billing;
@@ -32,7 +33,7 @@ class OrderRetrive {
     total = json['total'];
     status = json['status'];
     billing =
-    json['billing'] != null ? new Billing.fromJson(json['billing']) : null;
+        json['billing'] != null ? new Billing.fromJson(json['billing']) : null;
 
     if (json['line_items'] != null) {
       line_items = new List<LineItem>();
@@ -42,16 +43,13 @@ class OrderRetrive {
     }
   }
 
-
-
-    // if (json['billing'] != null) {
-    //   billing = new List<Billing>();
-    //   json['billing'].forEach((v) {
-    //     billing.add(new Billing.fromJson(v));
-    //   });
-    // }
-  }
-
+// if (json['billing'] != null) {
+//   billing = new List<Billing>();
+//   json['billing'].forEach((v) {
+//     billing.add(new Billing.fromJson(v));
+//   });
+// }
+}
 
 class LineItem {
   int id;
@@ -72,6 +70,7 @@ class LineItem {
     productID = json['product_id'];
     variationID = json['variation_id'];
   }
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
@@ -81,9 +80,6 @@ class LineItem {
     return data;
   }
 }
-
-
-
 
 class Billing {
   String firstName;
@@ -104,6 +100,7 @@ class Billing {
     email = json['email'];
     phone = json['phone'];
   }
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['first_name'] = this.firstName;
@@ -113,4 +110,3 @@ class Billing {
     return data;
   }
 }
-

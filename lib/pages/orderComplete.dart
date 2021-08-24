@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gazal/models/user_details.dart';
-
-import 'package:gazal/pages/base_page.dart';
 import 'package:gazal/models/apiService.dart';
-import 'package:gazal/models/order_test.dart';
 import 'package:gazal/models/database.dart';
+import 'package:gazal/models/order_test.dart';
+import 'package:gazal/models/user_details.dart';
 import 'package:gazal/models/users.dart';
+import 'package:gazal/pages/base_page.dart';
 
 // ignore: must_be_immutable
 class OrderComplete extends BasePage {
@@ -37,6 +36,7 @@ class _OrderCompleteState extends BasePageState<OrderComplete> {
   OrderDetails orderDetails;
   User user;
   String name;
+
   void initState() {
     orderDetails = new OrderDetails();
     super.initState();

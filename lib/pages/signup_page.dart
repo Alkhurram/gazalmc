@@ -3,7 +3,6 @@ import 'package:gazal/models/apiService.dart';
 import 'package:gazal/models/customer.dart';
 import 'package:gazal/pages/home_page.dart';
 import 'package:gazal/pages/home_pagess.dart';
-import 'package:gazal/pages/Category_page.dart';
 import 'package:share/share.dart';
 import 'package:gazal/pages/aboutus.dart';
 import 'package:gazal/pages/home_pages.dart';
@@ -28,6 +27,7 @@ class SignupPage extends StatefulWidget {
   String productName;
   String attrubiteId;
   String attrubiteName;
+
   @override
   _SignupPageState createState() => _SignupPageState();
 }
@@ -44,6 +44,7 @@ class _SignupPageState extends State<SignupPage> {
   GlobalKey<FormState> globalKey = new GlobalKey();
   bool hidepassword = true;
   bool isApiCallProcess = false;
+
   @override
   void initState() {
     apiService = new APIService();
@@ -55,14 +56,10 @@ class _SignupPageState extends State<SignupPage> {
     return new Scaffold(
       backgroundColor: Colors.black,
       appBar: _buildAppbar(),
-
       bottomNavigationBar: BottomAppBar(
-
         color: Color.fromRGBO(60, 60, 60, 1),
-        child:
-        _buttomBar(),
+        child: _buttomBar(),
       ),
-
       body: ProgressHUD(
         child: new Form(
           key: globalKey,
@@ -247,274 +244,294 @@ class _SignupPageState extends State<SignupPage> {
 
   Widget _formUI2() {
     return SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.all(10),
-        child: Container(
-            child: Align(
-          alignment: Alignment.topLeft,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                  margin: EdgeInsets.all(10),
-                  padding: EdgeInsets.all(5),
-                  decoration: BoxDecoration(
-                    // color: const Color(0xff7c94b6),
-                    // color: Colors.black,
+        child: Padding(
+            padding: EdgeInsets.all(10),
+            child: Container(
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Container(
+                          margin: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            // color: const Color(0xff7c94b6),
+                            // color: Colors.black,
 
-                    border: Border.all(
-                      // color: Color.fromRGBO(87, 198, 255, 1),
-                      width: 0,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child:
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Container(
-                        child: Center(
-                            child: Text(
-                                "Mobile Repair Booking At Your Doorstep In \n 4 Easy Steps",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: "Roboto Condensed",
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 14,
-                                  color: Colors.amber,
-                                )))),
-                  ])),
-
-              Column(
-                children: [
-                  Container(
-                    margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    child: SizedBox(
-                      height: 40,
-                      child: Row(children: [
-                        Flexible(
-                            flex: 1,
-                            fit: FlexFit.tight,
-                            child: Container(
-                                child: Center(
-                                  child: Icon(Icons.done,
-                                      color: Colors.green, semanticLabel: 'Semantics'),
-                                ))),
-                        Flexible(
-                            flex: 1,
-                            fit: FlexFit.tight,
-                            child: Container(
-                                child: Center(
-                                  child: Icon(Icons.done,
-                                      color: Colors.green, semanticLabel: 'Semantics'),
-                                ))),
-                        Flexible(
-                            flex: 1,
-                            fit: FlexFit.tight,
-                            child: Container(
-                                child: Center(
-                                  child: Icon(Icons.done,
-                                      color: Colors.amber, semanticLabel: 'Semantics'),
-                                ))),
-                        Flexible(
-                            flex: 1,
-                            fit: FlexFit.tight,
-                            child: Container(
-                                child: Center(
-                                  child: Icon(Icons.rotate_right,
-                                      color: const Color(0xff7c94b6),
-                                      semanticLabel: 'Semantics'),
-                                ))),
-                      ]),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    child: SizedBox(
-                      height: 5,
-                      child: Row(
+                            border: Border.all(
+                              // color: Color.fromRGBO(87, 198, 255, 1),
+                              width: 0,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                    child: Center(
+                                        child: Text(
+                                            "Mobile Repair Booking At Your Doorstep In \n 4 Easy Steps",
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              fontFamily: "Roboto Condensed",
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14,
+                                              color: Colors.amber,
+                                            )))),
+                              ])),
+                      Column(
                         children: [
-                          Flexible(
-                              flex: 1,
-                              fit: FlexFit.tight,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  // color: const Color(0xff7c94b6),
-                                  // color: Colors.black,
-                                  color: Colors.green,
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            child: SizedBox(
+                              height: 40,
+                              child: Row(children: [
+                                Flexible(
+                                    flex: 1,
+                                    fit: FlexFit.tight,
+                                    child: Container(
+                                        child: Center(
+                                      child: Icon(Icons.done,
+                                          color: Colors.green,
+                                          semanticLabel: 'Semantics'),
+                                    ))),
+                                Flexible(
+                                    flex: 1,
+                                    fit: FlexFit.tight,
+                                    child: Container(
+                                        child: Center(
+                                      child: Icon(Icons.done,
+                                          color: Colors.green,
+                                          semanticLabel: 'Semantics'),
+                                    ))),
+                                Flexible(
+                                    flex: 1,
+                                    fit: FlexFit.tight,
+                                    child: Container(
+                                        child: Center(
+                                      child: Icon(Icons.done,
+                                          color: Colors.amber,
+                                          semanticLabel: 'Semantics'),
+                                    ))),
+                                Flexible(
+                                    flex: 1,
+                                    fit: FlexFit.tight,
+                                    child: Container(
+                                        child: Center(
+                                      child: Icon(Icons.rotate_right,
+                                          color: const Color(0xff7c94b6),
+                                          semanticLabel: 'Semantics'),
+                                    ))),
+                              ]),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            child: SizedBox(
+                              height: 5,
+                              child: Row(
+                                children: [
+                                  Flexible(
+                                      flex: 1,
+                                      fit: FlexFit.tight,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          // color: const Color(0xff7c94b6),
+                                          // color: Colors.black,
+                                          color: Colors.green,
 
-                                  border: Border.all(
-                                    color: Color.fromRGBO(87, 198, 255, 1),
-                                    width: 0,
-                                  ),
-                                ),
-                              )),
-                          Flexible(
-                              flex: 1,
-                              fit: FlexFit.tight,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  // color: const Color(0xff7c94b6),
-                                  // color: Colors.black,
-                                  color: Colors.green,
+                                          border: Border.all(
+                                            color:
+                                                Color.fromRGBO(87, 198, 255, 1),
+                                            width: 0,
+                                          ),
+                                        ),
+                                      )),
+                                  Flexible(
+                                      flex: 1,
+                                      fit: FlexFit.tight,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          // color: const Color(0xff7c94b6),
+                                          // color: Colors.black,
+                                          color: Colors.green,
 
-                                  border: Border.all(
-                                    color: Color.fromRGBO(87, 198, 255, 1),
-                                    width: 0,
-                                  ),
-                                ),
-                              )),
-                          Flexible(
-                              flex: 1,
-                              fit: FlexFit.tight,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  // color: const Color(0xff7c94b6),
-                                  color: Colors.green,
+                                          border: Border.all(
+                                            color:
+                                                Color.fromRGBO(87, 198, 255, 1),
+                                            width: 0,
+                                          ),
+                                        ),
+                                      )),
+                                  Flexible(
+                                      flex: 1,
+                                      fit: FlexFit.tight,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          // color: const Color(0xff7c94b6),
+                                          color: Colors.green,
 
-                                  border: Border.all(
-                                    color: Color.fromRGBO(87, 198, 255, 1),
-                                    width: 0,
-                                  ),
-                                ),
-                              )),
-                          Flexible(
-                              flex: 1,
-                              fit: FlexFit.tight,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: const Color(0xff7c94b6),
-                                  // color: Colors.black,
+                                          border: Border.all(
+                                            color:
+                                                Color.fromRGBO(87, 198, 255, 1),
+                                            width: 0,
+                                          ),
+                                        ),
+                                      )),
+                                  Flexible(
+                                      flex: 1,
+                                      fit: FlexFit.tight,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xff7c94b6),
+                                          // color: Colors.black,
 
-                                  border: Border.all(
-                                    color: Color.fromRGBO(87, 198, 255, 1),
-                                    width: 0,
-                                  ),
-                                ),
-                              )),
+                                          border: Border.all(
+                                            color:
+                                                Color.fromRGBO(87, 198, 255, 1),
+                                            width: 0,
+                                          ),
+                                        ),
+                                      )),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                            child: SizedBox(
+                              height: 50,
+                              child: Row(children: [
+                                Flexible(
+                                    flex: 1,
+                                    fit: FlexFit.tight,
+                                    child: Container(
+                                        child: Center(
+                                            child: Text("1.Tab your Brand",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  fontFamily:
+                                                      "Roboto Condensed",
+                                                  fontSize: 13,
+                                                  color: Color.fromRGBO(
+                                                      132, 131, 133, 1),
+
+                                                  // color: Colors.blue.shade300
+                                                ))))),
+                                Flexible(
+                                    flex: 1,
+                                    fit: FlexFit.tight,
+                                    child: Container(
+                                        child: Center(
+                                            child: Text("2.Tab Your Model",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  fontFamily:
+                                                      "Roboto Condensed",
+                                                  fontSize: 13,
+                                                  color: Color.fromRGBO(
+                                                      132, 131, 133, 1),
+
+                                                  // color: Colors.blue.shade300
+                                                ))))),
+                                Flexible(
+                                    flex: 1,
+                                    fit: FlexFit.tight,
+                                    child: Container(
+                                        child: Center(
+                                            child: Text("3.Tab Your Issue",
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  fontFamily:
+                                                      "Roboto Condensed",
+                                                  fontSize: 13,
+                                                  color: Color.fromRGBO(
+                                                      132, 131, 133, 1),
+
+                                                  // color: Colors.blue.shade300
+                                                ))))),
+                                Flexible(
+                                    flex: 1,
+                                    fit: FlexFit.tight,
+                                    child: Container(
+                                        child: Center(
+                                            child: Text("4.Booking",
+                                                style: TextStyle(
+                                                  fontFamily:
+                                                      "Roboto Condensed",
+                                                  fontSize: 13,
+                                                  // color: Colors.blue.shade300
+                                                  color: Color.fromRGBO(
+                                                      132, 131, 133, 1),
+                                                ))))),
+                              ]),
+                            ),
+                          ),
                         ],
                       ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    child: SizedBox(
-                      height: 50,
-                      child: Row(children: [
-                        Flexible(
-                            flex: 1,
-                            fit: FlexFit.tight,
-                            child: Container(
-                                child: Center(
-                                    child: Text("1.Tab your Brand",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: "Roboto Condensed",
-                                          fontSize: 13,
-                                          color: Color.fromRGBO(132, 131, 133, 1),
-
-                                          // color: Colors.blue.shade300
-                                        ))))),
-                        Flexible(
-                            flex: 1,
-                            fit: FlexFit.tight,
-                            child: Container(
-                                child: Center(
-                                    child: Text("2.Tab Your Model",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: "Roboto Condensed",
-                                          fontSize: 13,
-                                          color: Color.fromRGBO(132, 131, 133, 1),
-
-                                          // color: Colors.blue.shade300
-                                        ))))),
-                        Flexible(
-                            flex: 1,
-                            fit: FlexFit.tight,
-                            child: Container(
-                                child: Center(
-                                    child: Text("3.Tab Your Issue",
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: "Roboto Condensed",
-                                          fontSize: 13,
-                                          color: Color.fromRGBO(132, 131, 133, 1),
-
-                                          // color: Colors.blue.shade300
-                                        ))))),
-                        Flexible(
-                            flex: 1,
-                            fit: FlexFit.tight,
-                            child: Container(
-                                child: Center(
-                                    child: Text("4.Booking",
-                                        style: TextStyle(
-                                          fontFamily: "Roboto Condensed",
-                                          fontSize: 13,
-                                          // color: Colors.blue.shade300
-                                          color: Color.fromRGBO(132, 131, 133, 1),
-                                        ))))),
-                      ]),
-                    ),
-                  ),
-                ],
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 50,
+                          ),
+                          Container(
+                            child: Center(
+                                child: FormHelper.saveButton("Tab for Booking",
+                                    () {
+                              if (valideAndSave()) {
+                                print(model.tojson());
+                                setState(() {
+                                  isApiCallProcess = true;
+                                });
+                                apiService
+                                    .createOrder2(
+                                        customerid,
+                                        firstName,
+                                        lastName,
+                                        phone,
+                                        email,
+                                        this.widget.attrubiteId,
+                                        this.widget.attrubiteName,
+                                        this.widget.productId,
+                                        this.widget.productName)
+                                    .then((ret) {
+                                  setState(() {
+                                    isApiCallProcess = false;
+                                  });
+                                  if (ret) {
+                                    FormHelper.showMessage(context, "Gazal",
+                                        "Registration Sucessful", "Ok", () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  HomePagess()));
+                                    });
+                                  } else {
+                                    FormHelper.showMessage(
+                                      context,
+                                      "Gazal",
+                                      "Email ID Already Registerd",
+                                      "ok",
+                                      () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    );
+                                  }
+                                });
+                              }
+                            })),
+                          ),
+                        ],
+                      ),
+                    ]),
               ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-
-              SizedBox(
-                height: 50,
-              ),
-
-              Container(
-                child: Center(
-                    child: FormHelper.saveButton("Tab for Booking", () {
-                  if (valideAndSave()) {
-                    print(model.tojson());
-                    setState(() {
-                      isApiCallProcess = true;
-                    });
-                    apiService.createOrder2(customerid, firstName, lastName, phone,
-                        email, this.widget.attrubiteId, this.widget.attrubiteName, this.widget.productId, this.widget.productName)
-
-
-                        .then((ret) {
-                      setState(() {
-                        isApiCallProcess = false;
-                      });
-                      if (ret) {
-                        FormHelper.showMessage(
-                            context, "Gazal", "Registration Sucessful", "Ok",
-                            () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomePagess()));
-                        });
-                      } else {
-                        FormHelper.showMessage(
-                          context,
-                          "Gazal",
-                          "Email ID Already Registerd",
-                          "ok",
-                          () {
-                            Navigator.of(context).pop();
-                          },
-                        );
-                      }
-                    });
-                  }
-                })),
-              ),
-            ],
-          ),
-        ]),
-      ),
-    )));
+            )));
   }
 
   bool valideAndSave() {
@@ -542,40 +559,34 @@ class _SignupPageState extends State<SignupPage> {
               password = modelhay.data.first.password;
               print("data is there");
               return _productsList2(customerid);
-              }
-            else{
-
+            } else {
               return _formUI();
-
             }
           } else {
             return _formUI();
           }
 
-          return Center(child: CircularProgressIndicator());
         });
   }
 
   Widget _updateOrder(int newID, String firstName2, String lastName2,
       String phone2, String email2, String attId, attName, proId, proName) {
-  bool data=false;
+    bool data = false;
     return new FutureBuilder(
-        future: apiService.createOrder2(newID, firstName2, lastName2, phone2,
-            email2, attId, attName, proId, proName).then((ret){
-setState(() {
-print (ret);
-  data=true;
-return _nextpage();
-
-});
-              }),
-
-        builder:
-            (BuildContext context, AsyncSnapshot model) {
+        future: apiService
+            .createOrder2(newID, firstName2, lastName2, phone2, email2, attId,
+                attName, proId, proName)
+            .then((ret) {
+          setState(() {
+            print(ret);
+            data = true;
+            return _nextpage();
+          });
+        }),
+        builder: (BuildContext context, AsyncSnapshot model) {
           // customer = modelhay.data.first.id;
 
-
-          if (data=true) {
+          if (data = true) {
             return _nextpage();
           }
 
@@ -952,213 +963,200 @@ return _nextpage();
 //Product Sumsung
   }
 
-  Widget _buttomBar()
-  {
-
-    return   Container(child:
-
-    Row(
-        children: [
-
-          Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                height: 60,
-                margin: EdgeInsets.all(2),
-                padding: EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  // color: Color.fromRGBO(40, 40, 40, 1),
-                  border: Border.all(width: 1,
-                    color: Color.fromRGBO(40, 40, 40, 1),
-                  ),
-                  borderRadius: BorderRadius.circular(10.0),
-
+  Widget _buttomBar() {
+    return Container(
+      child: Row(children: [
+        Flexible(
+            flex: 1,
+            fit: FlexFit.tight,
+            child: Container(
+              height: 60,
+              margin: EdgeInsets.all(2),
+              padding: EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                // color: Color.fromRGBO(40, 40, 40, 1),
+                border: Border.all(
+                  width: 1,
+                  color: Color.fromRGBO(40, 40, 40, 1),
                 ),
-                child: Center(
-                    child:
-
-                    MaterialButton(
-                      padding: EdgeInsets.all(0),
-                      minWidth: 0,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePage()));                                },
-                      child:
-                      Container(child:
-                      Column(children: [
-                        Icon(Icons.update,
-                            color: Colors.black, semanticLabel: 'Semantics'),
-                        SizedBox(height: 5),
-                        Container(child:
-                        Text("Booking",
-                          style: TextStyle(
-                            fontFamily: "Roboto Condensed",
-                            fontWeight: FontWeight.bold,
-                            fontSize: 11,
-                            color: Colors.black,
-
-                          ),
-
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+                  child: MaterialButton(
+                padding: EdgeInsets.all(0),
+                minWidth: 0,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePage()));
+                },
+                child: Container(
+                    child: Column(
+                  children: [
+                    Icon(Icons.update,
+                        color: Colors.black, semanticLabel: 'Semantics'),
+                    SizedBox(height: 5),
+                    Container(
+                      child: Text(
+                        "Booking",
+                        style: TextStyle(
+                          fontFamily: "Roboto Condensed",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 11,
+                          color: Colors.black,
                         ),
-                        )   ],)),
-                    )),
+                      ),
+                    )
+                  ],
+                )),
               )),
+            )),
 
-          //Second one
+        //Second one
 
-          Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                height: 60,
-                margin: EdgeInsets.all(2),
-                padding: EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                  // color: Color.fromRGBO(40, 40, 40, 1),
-                  border: Border.all(width: 1,
-                    color: Color.fromRGBO(40, 40, 40, 1),
-                  ),                  borderRadius: BorderRadius.circular(10.0),
+        Flexible(
+            flex: 1,
+            fit: FlexFit.tight,
+            child: Container(
+              height: 60,
+              margin: EdgeInsets.all(2),
+              padding: EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                color: Colors.lightBlueAccent,
+                // color: Color.fromRGBO(40, 40, 40, 1),
+                border: Border.all(
+                  width: 1,
+                  color: Color.fromRGBO(40, 40, 40, 1),
                 ),
-                child: Center(
-                    child:
-
-                    MaterialButton(
-                      padding: EdgeInsets.all(0),
-                      minWidth: 0,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomePages()));                                },
-                      child:
-                      Container(child:
-                      Column(children: [
-                        Icon(Icons.tap_and_play,
-                            color: Colors.black, semanticLabel: 'Semantics'),
-                        SizedBox(height: 5),
-                        Container(child:
-                        Text("Booking Details",
-                          style: TextStyle(
-                            fontFamily: "Roboto Condensed",
-                            fontWeight: FontWeight.bold,
-                            fontSize: 11,
-                            color: Colors.black,
-
-                          ),
-
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+                  child: MaterialButton(
+                padding: EdgeInsets.all(0),
+                minWidth: 0,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomePages()));
+                },
+                child: Container(
+                    child: Column(
+                  children: [
+                    Icon(Icons.tap_and_play,
+                        color: Colors.black, semanticLabel: 'Semantics'),
+                    SizedBox(height: 5),
+                    Container(
+                      child: Text(
+                        "Booking Details",
+                        style: TextStyle(
+                          fontFamily: "Roboto Condensed",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 11,
+                          color: Colors.black,
                         ),
-                        )   ],)),
-                    )),
+                      ),
+                    )
+                  ],
+                )),
               )),
+            )),
 
-          Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                height: 60,
-                margin: EdgeInsets.all(2),
-                padding: EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                  // color: Color.fromRGBO(40, 40, 40, 1),
-                  border: Border.all(width: 1,
-                    color: Color.fromRGBO(40, 40, 40, 1),
-                  ),                  borderRadius: BorderRadius.circular(10.0),
+        Flexible(
+            flex: 1,
+            fit: FlexFit.tight,
+            child: Container(
+              height: 60,
+              margin: EdgeInsets.all(2),
+              padding: EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                color: Colors.lightBlueAccent,
+                // color: Color.fromRGBO(40, 40, 40, 1),
+                border: Border.all(
+                  width: 1,
+                  color: Color.fromRGBO(40, 40, 40, 1),
                 ),
-                child: Center(
-                    child:
-
-                    MaterialButton(
-                      padding: EdgeInsets.all(0),
-                      minWidth: 0,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => AboutUs()));                                },
-                      child:
-                      Container(child:
-                      Column(children: [
-                        Icon(Icons.mobile_friendly_sharp,
-                            color: Colors.black, semanticLabel: 'Semantics'),
-                        SizedBox(height: 5),
-                        Container(child:
-                        Text("About Gazal",
-                          style: TextStyle(
-                            fontFamily: "Roboto Condensed",
-                            fontWeight: FontWeight.bold,
-                            fontSize: 11,
-                            color: Colors.black,
-
-                          ),
-
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+                  child: MaterialButton(
+                padding: EdgeInsets.all(0),
+                minWidth: 0,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AboutUs()));
+                },
+                child: Container(
+                    child: Column(
+                  children: [
+                    Icon(Icons.mobile_friendly_sharp,
+                        color: Colors.black, semanticLabel: 'Semantics'),
+                    SizedBox(height: 5),
+                    Container(
+                      child: Text(
+                        "About Gazal",
+                        style: TextStyle(
+                          fontFamily: "Roboto Condensed",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 11,
+                          color: Colors.black,
                         ),
-                        )   ],)),
-                    )),
+                      ),
+                    )
+                  ],
+                )),
               )),
+            )),
 
-
-          Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Container(
-                height: 60,
-                margin: EdgeInsets.all(2),
-                padding: EdgeInsets.all(2),
-                decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                  // color: Color.fromRGBO(40, 40, 40, 1),
-                  border: Border.all(width: 1,
-                    color: Color.fromRGBO(40, 40, 40, 1),
-                  ),                  borderRadius: BorderRadius.circular(10.0),
+        Flexible(
+            flex: 1,
+            fit: FlexFit.tight,
+            child: Container(
+              height: 60,
+              margin: EdgeInsets.all(2),
+              padding: EdgeInsets.all(2),
+              decoration: BoxDecoration(
+                color: Colors.lightBlueAccent,
+                // color: Color.fromRGBO(40, 40, 40, 1),
+                border: Border.all(
+                  width: 1,
+                  color: Color.fromRGBO(40, 40, 40, 1),
                 ),
-                child: Center(
-                    child:
-
-                    MaterialButton(
-                      padding: EdgeInsets.all(0),
-                      minWidth: 0,
-                      onPressed: () {
-
-                        Share.share('check out Gazal  website https://gazal.ae' +
-                            "Repair your Mobile at your Doorstep.You can download IOS and" +
-                            "Andriod app from Apple store and Google play.");
-
-                      },
-                      child:
-                      Container(child:
-                      Column(children: [
-                        Icon(Icons.share,
-                            color: Colors.black, semanticLabel: 'Semantics'),
-                        SizedBox(height: 5),
-                        Container(child:
-                        Text("Share App",
-                          style: TextStyle(
-                            fontFamily: "Roboto Condensed",
-                            fontWeight: FontWeight.bold,
-                            fontSize: 11,
-                            color: Colors.black,
-
-                          ),
-
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+                  child: MaterialButton(
+                padding: EdgeInsets.all(0),
+                minWidth: 0,
+                onPressed: () {
+                  Share.share('check out Gazal  website https://gazal.ae' +
+                      "Repair your Mobile at your Doorstep.You can download IOS and" +
+                      "Andriod app from Apple store and Google play.");
+                },
+                child: Container(
+                    child: Column(
+                  children: [
+                    Icon(Icons.share,
+                        color: Colors.black, semanticLabel: 'Semantics'),
+                    SizedBox(height: 5),
+                    Container(
+                      child: Text(
+                        "Share App",
+                        style: TextStyle(
+                          fontFamily: "Roboto Condensed",
+                          fontWeight: FontWeight.bold,
+                          fontSize: 11,
+                          color: Colors.black,
                         ),
-                        )   ],)),
-                    )),
+                      ),
+                    )
+                  ],
+                )),
               )),
-
-        ]),
+            )),
+      ]),
       // )
       //     ])  // buttomBar(),
     );
-
-
   }
-
 }
 
 //retrive customer
@@ -1193,7 +1191,4 @@ Widget _buildAppbar() {
       )
     ],
   );
-
-
-
-  }
+}

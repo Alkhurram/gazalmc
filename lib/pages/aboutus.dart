@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gazal/models/apiService.dart';
 import 'package:gazal/pages/base_page2.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import 'package:gazal/models/apiService.dart';
 
 // ignore: must_be_immutable
 class AboutUs extends BasePages {
@@ -21,6 +20,7 @@ class _AboutUsState extends BasePagesState<AboutUs> {
       throw 'Could not launch $url';
     }
   }
+
   _launchwhatsapp() async {
     const url = 'https://api.whatsapp.com/send?phone=054221885';
     if (await canLaunch(url)) {
@@ -83,7 +83,6 @@ class _AboutUsState extends BasePagesState<AboutUs> {
                           style: TextStyle(color: Colors.white),
                         ),
                       ))),
-
               Flexible(
                   flex: 1,
                   fit: FlexFit.tight,
@@ -97,14 +96,13 @@ class _AboutUsState extends BasePagesState<AboutUs> {
                     ),
                     child: Center(
                         child: MaterialButton(
-                          padding: EdgeInsets.all(0),
-                          minWidth: 0,
-                          onPressed: () {
-                            _launchweb();
-                          },
-                          child: Image.asset("images/web.png",
-                              width: 30),
-                        )),
+                      padding: EdgeInsets.all(0),
+                      minWidth: 0,
+                      onPressed: () {
+                        _launchweb();
+                      },
+                      child: Image.asset("images/web.png", width: 30),
+                    )),
                   )),
               Flexible(
                   flex: 1,
@@ -125,7 +123,6 @@ class _AboutUsState extends BasePagesState<AboutUs> {
                           // FlutterOpenWhatsapp.sendSingleMessage(
                           //     "+971542211885", "Hello Gazal");
                           _launchwhatsapp();
-
                         },
                         child: Image.asset("images/whatsapp.png", width: 30),
                       ),

@@ -12,7 +12,8 @@ class User {
     "phone",
     "email",
     "password"
-  ];  
+  ];
+
   User(
     this.id,
     this.email,
@@ -21,6 +22,7 @@ class User {
     this.phone,
     this.password,
   );
+
   factory User.fromMap(Map<String, dynamic> data) {
     return User(
       data['id'],

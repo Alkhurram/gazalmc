@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gazal/pages/aboutus.dart';
 import 'package:gazal/pages/home_page.dart';
 import 'package:gazal/pages/home_pages.dart';
 import 'package:gazal/utils/ProgressHUD.dart';
-import 'package:gazal/pages/aboutus.dart';
 import 'package:share/share.dart';
 
 class BasePages extends StatefulWidget {

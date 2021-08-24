@@ -3,8 +3,6 @@ import 'package:gazal/pages/dashboard_page.dart';
 import 'package:gazal/pages/aboutus.dart';
 import 'package:gazal/pages/home_pages.dart';
 import 'package:share/share.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 
 // ignore: must_be_immutable
 class HomePage extends StatefulWidget {
@@ -13,13 +11,12 @@ class HomePage extends StatefulWidget {
   int id;
   String name;
   String email;
+
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-
-
   List<Widget> _widgetList = [
     DashboardPage(),
     DashboardPage(),
@@ -31,7 +28,6 @@ class _HomePageState extends State<HomePage> {
   String name;
   String email;
   int _index = 0;
-
 
   Widget build(BuildContext context) {
     return Scaffold(

@@ -14,20 +14,18 @@ class CustomerModel {
     this.phone,
     this.billing,
   });
-  CustomerModel.fromJson(Map<String, dynamic> json) {
 
+  CustomerModel.fromJson(Map<String, dynamic> json) {
     firstName = json['first_name'];
     lastName = json['last_name'];
     email = json['email'];
-    billing=[
-    firstName = json['first_name'],
-    lastName = json['last_name'],
-    phone=json['phone'],
-
+    billing = [
+      firstName = json['first_name'],
+      lastName = json['last_name'],
+      phone = json['phone'],
     ];
-
-
   }
+
   Map<String, dynamic> tojson() {
     Map<String, dynamic> map = {};
     map.addAll({

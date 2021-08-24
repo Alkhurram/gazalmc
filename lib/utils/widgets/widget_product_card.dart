@@ -6,6 +6,7 @@ import 'package:gazal/models/product.dart';
 class ProductCard extends StatelessWidget {
   ProductCard({Key key, this.data}) : super(key: key);
   Product data;
+
   @override
   Widget build(BuildContext context) {
     return Container(

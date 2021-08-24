@@ -8,6 +8,7 @@ import 'package:gazal/models/apiService.dart';
 class SingleProduct extends BasePage {
   SingleProduct({Key key, this.name}) : super(key: key);
   String name;
+
   @override
   _SingleProductState createState() => _SingleProductState();
 }

@@ -13,6 +13,7 @@ import 'package:syncfusion_flutter_gauges/gauges.dart';
 class OrderDetails extends BasePage {
   OrderDetails({Key key, this.categoryid}) : super(key: key);
   int categoryid;
+
   @override
   _OrderDetailsState createState() => _OrderDetailsState();
 }
@@ -28,6 +29,7 @@ class _OrderDetailsState extends BasePageState<OrderDetails> {
   Timer _timer;
   double progressValue = 60.0;
   double secondaryProgressValue = 60.0;
+
   // ignore: sort_constructors_first
   _OrderDetailsState() {
     _timer = Timer.periodic(const Duration(milliseconds: 100), (Timer _timer) {
@@ -43,6 +45,7 @@ class _OrderDetailsState extends BasePageState<OrderDetails> {
       });
     });
   }
+
   Widget pageUI() {
     //  return (Container(child: Text(this.widget.categoryid.toString())));
 
@@ -385,7 +388,7 @@ class _OrderDetailsState extends BasePageState<OrderDetails> {
   Widget _buildorderList(List<OrderRetrive> item) {
     print("item.length");
 
-    print(item.length+5);
+    print(item.length + 5);
     return Container(
       color: Colors.black,
       alignment: Alignment.centerLeft,

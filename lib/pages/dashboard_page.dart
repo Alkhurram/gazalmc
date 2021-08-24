@@ -5,6 +5,7 @@ import 'package:gazal/models/apiService.dart';
 import 'package:gazal/models/orderRetrive.dart';
 import 'package:gazal/pages/order_page.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
+
 // import 'package:flutter_open_whatsapp/flutter_open_whatsapp.dart';
 import 'package:gazal/pages/product_page.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -33,8 +34,6 @@ _launchwhatsapp() async {
     throw 'Could not launch $url';
   }
 }
-
-
 
 _launchface() async {
   const url = 'https://www.facebook.com/AlGazalAE';
@@ -113,7 +112,6 @@ class _DashboardPageState extends State<DashboardPage> {
                                   style: TextStyle(color: Colors.white),
                                 ),
                               ))),
-
                       Flexible(
                           flex: 1,
                           fit: FlexFit.tight,
@@ -127,17 +125,14 @@ class _DashboardPageState extends State<DashboardPage> {
                             ),
                             child: Center(
                                 child: MaterialButton(
-                                  padding: EdgeInsets.all(0),
-                                  minWidth: 0,
-                                  onPressed: () {
-                                    _launchweb();
-                                  },
-                                  child: Image.asset("images/web.png",
-                                      width: 30),
-                                )),
+                              padding: EdgeInsets.all(0),
+                              minWidth: 0,
+                              onPressed: () {
+                                _launchweb();
+                              },
+                              child: Image.asset("images/web.png", width: 30),
+                            )),
                           )),
-
-
                       Flexible(
                           flex: 1,
                           fit: FlexFit.tight,
@@ -154,7 +149,6 @@ class _DashboardPageState extends State<DashboardPage> {
                                 padding: EdgeInsets.all(0),
                                 minWidth: 0,
                                 onPressed: () {
-
                                   _launchwhatsapp();
                                   // FlutterOpenWhatsapp.sendSingleMessage(
                                   //     "+971542211885", "Hello");

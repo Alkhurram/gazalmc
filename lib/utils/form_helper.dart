@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class FormHelper {
   static Widget textInput(
     BuildContext context,
@@ -14,7 +13,6 @@ class FormHelper {
     Widget suffixIcon,
   }) {
     return TextFormField(
-
       initialValue: initialValue != null ? initialValue.toString() : "",
       decoration: fieldDecoration(
         context,
@@ -50,7 +48,6 @@ class FormHelper {
       prefixIcon: prefixIcon,
       suffixIcon: suffixIcon,
       enabledBorder: OutlineInputBorder(
-
         borderSide: BorderSide(
           color: Color.fromARGB(60, 60, 60, 1),
           // color: Theme.of(context).primaryColor,
@@ -72,10 +69,7 @@ class FormHelper {
       child: Text(
         labelName,
         style: new TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 13.0,
-          color: Colors.grey
-        ),
+            fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.grey),
       ),
     );
   }

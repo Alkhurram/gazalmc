@@ -31,6 +31,7 @@ class _SingleProductState extends BasePageState<SingleProduct> {
       throw 'Could not launch $url';
     }
   }
+
   _launchwhatsapp() async {
     const url = 'https://api.whatsapp.com/send?phone=054221885';
     if (await canLaunch(url)) {
@@ -93,7 +94,6 @@ class _SingleProductState extends BasePageState<SingleProduct> {
                           style: TextStyle(color: Colors.white),
                         ),
                       ))),
-
               Flexible(
                   flex: 1,
                   fit: FlexFit.tight,
@@ -107,14 +107,13 @@ class _SingleProductState extends BasePageState<SingleProduct> {
                     ),
                     child: Center(
                         child: MaterialButton(
-                          padding: EdgeInsets.all(0),
-                          minWidth: 0,
-                          onPressed: () {
-                            _launchweb();
-                          },
-                          child: Image.asset("images/web.png",
-                              width: 30),
-                        )),
+                      padding: EdgeInsets.all(0),
+                      minWidth: 0,
+                      onPressed: () {
+                        _launchweb();
+                      },
+                      child: Image.asset("images/web.png", width: 30),
+                    )),
                   )),
               Flexible(
                   flex: 1,
@@ -135,7 +134,6 @@ class _SingleProductState extends BasePageState<SingleProduct> {
                           // FlutterOpenWhatsapp.sendSingleMessage(
                           //     "+971542211885", "Hello");
                           _launchwhatsapp();
-
                         },
                         child: Image.asset("images/whatsapp.png", width: 30),
                       ),

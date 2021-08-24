@@ -12,6 +12,7 @@ class CustomerDetails {
     this.shipping,
     this.lineItem,
   });
+
   CustomerDetails.fromJson(Map<String, dynamic> json) {
     id = json["id"];
     firstName = json["firstName"];
@@ -25,6 +26,7 @@ class CustomerDetails {
         ? new LineItem.fromJson(json['lineItem'])
         : null;
   }
+
   Map<String, dynamic> toJson() {
     Map<String, dynamic> map = {};
     map.addAll({
@@ -122,6 +124,7 @@ class LineItem {
   String productid;
   String quantity;
   String variationid;
+
   LineItem({this.productid, this.quantity, this.variationid});
 
   LineItem.fromJson(Map<String, dynamic> json) {
@@ -151,6 +154,7 @@ class Shipping {
   String postcode;
   String email;
   String phone;
+
   Shipping({
     this.firstName,
     this.lastName,

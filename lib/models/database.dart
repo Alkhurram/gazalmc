@@ -8,6 +8,7 @@ import 'package:gazal/models/users.dart';
 
 class SQLiteDbProvider {
   SQLiteDbProvider._();
+
   static final SQLiteDbProvider db = SQLiteDbProvider._();
   static Database _database;
 
@@ -37,8 +38,6 @@ class SQLiteDbProvider {
     });
   }
 
-
-
   Future<List<User>> getAllUsers() async {
     final db = await database;
     List<Map> results =
@@ -52,11 +51,10 @@ class SQLiteDbProvider {
     return users;
   }
 
-
   Future<List<User>> getAllUsersNew() async {
     final db = await database;
     List<Map> results =
-    await db.query("User", columns: User.columns, orderBy: "id ASC");
+        await db.query("User", columns: User.columns, orderBy: "id ASC");
 
     List<User> users = new List();
     results.forEach((result) {
@@ -65,7 +63,6 @@ class SQLiteDbProvider {
     });
     return users;
   }
-
 
   Future<List<User>> getAllUsersbyId() async {
     final db = await database;
@@ -106,6 +103,7 @@ class SQLiteDbProvider {
   }
 
   User user;
+
   update(id, firstName, lastName, phone, email, password) async {
     final db = await database;
     user.firstName = firstName;
@@ -114,8 +112,8 @@ class SQLiteDbProvider {
     user.email = email;
     user.password = password;
 
-    var result = await db
-        .update("User", user.toJson(), where: "id = ?", whereArgs: id);
+    var result =
+        await db.update("User", user.toJson(), where: "id = ?", whereArgs: id);
     return result;
   }
 

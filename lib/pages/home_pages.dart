@@ -4,7 +4,6 @@ import 'package:gazal/pages/aboutus.dart';
 import 'package:gazal/pages/home_page.dart';
 import 'package:share/share.dart';
 
-
 // ignore: must_be_immutable
 class HomePages extends StatefulWidget {
   HomePages({Key key, this.id, this.name, this.email}) : super(key: key);
@@ -12,6 +11,7 @@ class HomePages extends StatefulWidget {
   int id;
   String name;
   String email;
+
   @override
   _HomePagesState createState() => _HomePagesState();
 }

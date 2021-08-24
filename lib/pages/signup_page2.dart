@@ -42,6 +42,7 @@ class _SignupPageState extends State<SignupPage> {
   String mphone;
   String mpassword;
   BasePage basePage = new BasePage();
+
   // int _page = 0;
   GlobalKey _bottomNavigationKey = GlobalKey();
 
@@ -51,6 +52,7 @@ class _SignupPageState extends State<SignupPage> {
   TextEditingController controller = TextEditingController();
   bool hidepassword = true;
   bool isApiCallProcess = false;
+
   @override
   void initState() {
     apiService = new APIService();
@@ -279,6 +281,7 @@ class _SignupPageState extends State<SignupPage> {
       ),
     );
   }
+
   // else
 
   bool valideAndSave() {

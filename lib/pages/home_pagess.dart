@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gazal/pages/dashboard3.dart';
-
 import 'package:share/share.dart';
-
 
 // ignore: must_be_immutable
 class HomePagess extends StatefulWidget {
@@ -11,6 +9,7 @@ class HomePagess extends StatefulWidget {
   int id;
   String name;
   String email;
+
   @override
   _HomePagessState createState() => _HomePagessState();
 }
@@ -33,13 +32,12 @@ class _HomePagessState extends State<HomePagess> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
-
         appBar: _buildAppbar(),
         drawer: Drawer(
           child: Container(
 
-            // margin: EdgeInsets.all(3),
-            // padding: EdgeInsets.all(3),
+              // margin: EdgeInsets.all(3),
+              // padding: EdgeInsets.all(3),
               color: Colors.lightBlueAccent,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -88,14 +86,14 @@ class _HomePagessState extends State<HomePagess> {
                   ),
                   Container(
                       child: Center(
-                        child: Text("Mobile Repair at your doorstep",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: "Roboto Condensed",
-                              fontSize: 16,
-                              // color: Colors.black,
-                            )),
-                      )),
+                    child: Text("Mobile Repair at your doorstep",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: "Roboto Condensed",
+                          fontSize: 16,
+                          // color: Colors.black,
+                        )),
+                  )),
                   Container(
                     margin: EdgeInsets.all(10),
                     padding: EdgeInsets.all(10),
@@ -125,89 +123,89 @@ class _HomePagessState extends State<HomePagess> {
                         children: [
                           Container(
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.all(3),
-                                    padding: EdgeInsets.all(3),
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(40, 40, 40, 1),
-                                      border: Border.all(
-                                        color: Color.fromRGBO(66, 66, 66, 1),
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(5.0),
-                                    ),
-                                    child: Center(
-                                        child: Icon(
-                                          Icons.web,
-                                          color: Colors.white,
-                                          size: 20,
-                                        )),
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.all(3),
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  color: Color.fromRGBO(40, 40, 40, 1),
+                                  border: Border.all(
+                                    color: Color.fromRGBO(66, 66, 66, 1),
+                                    width: 1,
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.all(3),
-                                    padding: EdgeInsets.all(3),
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(40, 40, 40, 1),
-                                      border: Border.all(
-                                        color: Color.fromRGBO(66, 66, 66, 1),
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(5.0),
-                                    ),
-                                    child: Center(
-                                        child: Icon(
-                                          Icons.email,
-                                          color: Colors.white,
-                                          size: 20,
-                                        )),
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                child: Center(
+                                    child: Icon(
+                                  Icons.web,
+                                  color: Colors.white,
+                                  size: 20,
+                                )),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(3),
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  color: Color.fromRGBO(40, 40, 40, 1),
+                                  border: Border.all(
+                                    color: Color.fromRGBO(66, 66, 66, 1),
+                                    width: 1,
                                   ),
-                                ],
-                              )),
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                child: Center(
+                                    child: Icon(
+                                  Icons.email,
+                                  color: Colors.white,
+                                  size: 20,
+                                )),
+                              ),
+                            ],
+                          )),
                           Container(
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.all(3),
-                                    padding: EdgeInsets.all(3),
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(40, 40, 40, 1),
-                                      border: Border.all(
-                                        color: Color.fromRGBO(66, 66, 66, 1),
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(5.0),
-                                    ),
-                                    child: Center(
-                                        child: Text("www.gazal.ae",
-                                            style: TextStyle(
-                                              fontSize: 13,
-                                              color: Colors.white,
-                                              // color: Color.fromRGBO(60, 60, 60, 1),
-                                            ))),
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.all(3),
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  color: Color.fromRGBO(40, 40, 40, 1),
+                                  border: Border.all(
+                                    color: Color.fromRGBO(66, 66, 66, 1),
+                                    width: 1,
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.all(3),
-                                    padding: EdgeInsets.all(3),
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(40, 40, 40, 1),
-                                      border: Border.all(
-                                        color: Color.fromRGBO(66, 66, 66, 1),
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(5.0),
-                                    ),
-                                    child: Center(
-                                        child: Text("info@gazal.ae",
-                                            style: TextStyle(
-                                              fontSize: 13,
-                                              color: Colors.white,
-                                            ))),
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                child: Center(
+                                    child: Text("www.gazal.ae",
+                                        style: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.white,
+                                          // color: Color.fromRGBO(60, 60, 60, 1),
+                                        ))),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(3),
+                                padding: EdgeInsets.all(3),
+                                decoration: BoxDecoration(
+                                  color: Color.fromRGBO(40, 40, 40, 1),
+                                  border: Border.all(
+                                    color: Color.fromRGBO(66, 66, 66, 1),
+                                    width: 1,
                                   ),
-                                ],
-                              )),
+                                  borderRadius: BorderRadius.circular(5.0),
+                                ),
+                                child: Center(
+                                    child: Text("info@gazal.ae",
+                                        style: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.white,
+                                        ))),
+                              ),
+                            ],
+                          )),
                         ],
                       )),
                 ],

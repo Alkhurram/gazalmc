@@ -1,10 +1,10 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:gazal/models/apiService.dart';
 import 'package:gazal/models/order_test.dart';
+import 'package:gazal/pages/home_page.dart';
 import 'package:gazal/utils/ProgressHUD.dart';
 import 'package:gazal/utils/form_helper.dart';
-import 'package:gazal/pages/home_page.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 // ignore: must_be_immutable
 class OrderPage extends StatefulWidget {
@@ -26,6 +26,7 @@ class OrderPage extends StatefulWidget {
   String poscode = "2321";
   String address_1 = "new address 1";
   String address_2 = "new address 2";
+
   @override
   _OrderPageState createState() => _OrderPageState();
 }
@@ -49,6 +50,7 @@ class _OrderPageState extends State<OrderPage> {
   GlobalKey<FormState> globalKey = new GlobalKey();
   bool hidepassword = true;
   bool isApiCallProcess = false;
+
   @override
   void initState() {
     apiService = new APIService();

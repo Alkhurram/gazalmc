@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gazal/models/apiService.dart';
+import 'package:gazal/models/product.dart';
 import 'package:gazal/pages/base_page.dart';
 import 'package:gazal/pages/single_product.dart';
-import 'package:gazal/models/product.dart';
-import 'package:gazal/models/apiService.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // ignore: must_be_immutable
@@ -458,6 +458,7 @@ class _ProductPageState extends BasePageState<ProductPage> {
               return Center(child: CircularProgressIndicator());
             }));
   }
+
 // Widget _buildList(List<Product> items){
 // return Container(
 // height:200,

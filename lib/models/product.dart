@@ -10,6 +10,7 @@ class Product {
   String stockStatus;
   List<Images> images;
   List<Categories> categories;
+
   Product({
     this.id,
     this.name,
@@ -51,6 +52,7 @@ class Product {
 class Categories {
   int id;
   String name;
+
   Categories({
     this.id,
     this.name,
@@ -60,6 +62,7 @@ class Categories {
     id = json['id'];
     name = json['name'];
   }
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
@@ -70,9 +73,11 @@ class Categories {
 
 class Images {
   String src;
+
   Images({
     this.src,
   });
+
   Images.fromJson(Map<String, dynamic> json) {
     src = json['src'];
   }

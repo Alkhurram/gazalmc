@@ -1,15 +1,15 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:gazal/conf.dart';
 import 'package:gazal/models/Attribute.dart';
+import 'package:gazal/models/category.dart';
 import 'package:gazal/models/customer.dart';
 import 'package:gazal/models/database.dart';
-import 'package:gazal/models/user_details.dart';
-import 'package:gazal/models/category.dart';
-import 'package:gazal/models/product.dart';
 import 'package:gazal/models/orderRetrive.dart';
-
+import 'package:gazal/models/product.dart';
+import 'package:gazal/models/user_details.dart';
 import 'package:gazal/models/users.dart';
 
 class APIService {
@@ -253,7 +253,6 @@ class APIService {
               "last_name": lastName2,
               "email": email2,
             },
-            
             "line_items": [
               {
                 "name": attributeName2 + "--" + productName2,

@@ -47,8 +47,6 @@ class Data {
   String email;
   String password;
 
-
-
   Data({
     this.token,
     this.id,
@@ -64,9 +62,9 @@ class Data {
     id = json['id'];
     firstName = json['firstName'];
     lastName = json['lastName'];
-phone=json["phone"];
+    phone = json["phone"];
     email = json['email'];
-    password=json['password'];
+    password = json['password'];
   }
 
   Map<String, dynamic> toJson() {
